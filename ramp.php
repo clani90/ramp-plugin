@@ -13,6 +13,13 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use PostTypes\PostType;
+use PostTypes\Taxonomy;
+
+$chapters = new Taxonomy('chapter');
+$chapters->options([
+    'hierarchical' => false,
+]);
+$chapters->register();
 
 $names = [
     'name'     => 'handbook',
@@ -21,10 +28,14 @@ $names = [
     'slug'     => 'handbook',
 ];
 
-$books = new PostType( $names );
+$handbook = new PostType( $names );
 
-$books->labels([
+$handbook->labels([
     'menu_name' => 'Handbook'
 ]);
 
-$books->register();
+$handbook->taxonomy('chapter');
+
+$handbook->taxonomy('post_tag');
+
+$handbook->register();
