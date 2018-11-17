@@ -1,0 +1,13 @@
+{
+    "name": "clani90/ramp-plugin",
+    "type": "wordpress-muplugin",
+    "authors": [
+        {
+            "name": "Reefiki",
+            "email": "reefiki@clani90.com"
+        }
+    ],
+    "require": {
+        "jjgrainger/posttypes": "^2.0"
+    }
+}
