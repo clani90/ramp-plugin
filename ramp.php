@@ -15,12 +15,16 @@ require __DIR__ . '/vendor/autoload.php';
 use PostTypes\PostType;
 
 $names = [
-    'name'     => 'Handbook',
+    'name'     => 'handbook',
     'singular' => 'Page',
     'plural'   => 'Pages',
     'slug'     => 'handbook',
 ];
 
 $books = new PostType( $names );
+
+$books->labels([
+    'menu_name' => 'Handbook'
+]);
 
 $books->register();
