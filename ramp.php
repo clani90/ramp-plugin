@@ -12,30 +12,11 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use PostTypes\PostType;
-use PostTypes\Taxonomy;
+use Ramp\PostType;
+use Ramp\Taxonomy;
 
-$chapters = new Taxonomy('chapter');
-$chapters->options([
-    'hierarchical' => false,
-]);
-$chapters->register();
+$handbook = new PostType\Handbook();
+$handbook->setup();
 
-$names = [
-    'name'     => 'handbook',
-    'singular' => 'Page',
-    'plural'   => 'Pages',
-    'slug'     => 'handbook',
-];
-
-$handbook = new PostType( $names );
-
-$handbook->labels([
-    'menu_name' => 'Handbook'
-]);
-
-$handbook->taxonomy('chapter');
-
-$handbook->taxonomy('post_tag');
-
-$handbook->register();
+$chapter = new Taxonomy\Chapter();
+$chapter->setup();

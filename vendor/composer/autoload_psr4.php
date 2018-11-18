@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Ramp\\' => array($baseDir . '/src'),
     'PostTypes\\' => array($vendorDir . '/jjgrainger/posttypes/src'),
 );

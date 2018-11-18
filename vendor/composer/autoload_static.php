@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit4a8b9d88426be22a07d47b8d93b2e79e
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'Ramp\\' => 5,
+        ),
         'P' => 
         array (
             'PostTypes\\' => 10,
@@ -14,6 +18,10 @@ class ComposerStaticInit4a8b9d88426be22a07d47b8d93b2e79e
     );
 
     public static $prefixDirsPsr4 = array (
+        'Ramp\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'PostTypes\\' => 
         array (
             0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',

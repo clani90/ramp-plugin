@@ -7,6 +7,11 @@
             "email": "reefiki@clani90.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Ramp\\": "src/"
+        }
+    },
     "require": {
         "jjgrainger/posttypes": "^2.0"
     }
