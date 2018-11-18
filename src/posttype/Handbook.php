@@ -15,6 +15,10 @@ class Handbook extends BasePostType
         'menu_name' => 'Handbook'
     ];
 
+    protected $options = [
+        'show_in_rest' => true
+    ];
+
     protected $taxonomies = [
         'chapter', 'post_tag'
     ];

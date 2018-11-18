@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Wheel\\' => array($baseDir . '/app'),
     'Ramp\\' => array($baseDir . '/src'),
     'PostTypes\\' => array($vendorDir . '/jjgrainger/posttypes/src'),
 );

@@ -7,9 +7,9 @@ use PostTypes\PostType as PostCreate;
 class BasePostType 
 {
 
-    public function setup()
+    public function init()
     {
-        $PostType = new PostCreate($this->names);
+        $PostType = new PostCreate($this->names, $this->options);
 
         foreach( $this->taxonomies as $taxonomy )
         {

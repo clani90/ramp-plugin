@@ -7,7 +7,7 @@ use PostTypes\Taxonomy as TaxonomyCreate;
 abstract class BaseTaxonomy 
 {
 
-    public function setup()
+    public function init()
     {
         $chapters = new TaxonomyCreate($this->names);
 
