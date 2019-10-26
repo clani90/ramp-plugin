@@ -36,7 +36,7 @@ add_action( 'rest_api_init', function () {
 
             $data = [
                 'username' => $user->display_name,
-                'is_admin' => in_array('administrator', $user->caps),
+                'is_admin' => $user->has_cap('edit_posts'),
             ];
 
             // Create the response object
